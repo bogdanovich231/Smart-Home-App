@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/device_box.dart';
+import 'package:flutter_app/screens/user_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'burger_menu.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -23,9 +25,12 @@ class _HomePageState extends State<Home> {
     });
   }
 
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: _scaffoldKey,
+        drawer: BurgerMenu(),
         backgroundColor: Colors.grey[300],
         body: SafeArea(
             child: Column(
@@ -33,21 +38,43 @@ class _HomePageState extends State<Home> {
           children: [
             Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 40.0,
+                  horizontal: 30.0,
                   vertical: 25,
                 ),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.menu,
-                        size: 45,
-                        color: Colors.grey[800],
+                      IconButton(
+                        icon: Icon(
+                          Icons.menu,
+                          size: 45,
+                          color: Colors.grey[800],
+                        ),
+                        onPressed: () {
+                          _scaffoldKey.currentState!.openDrawer();
+                        },
                       ),
-                      Icon(
-                        Icons.person,
-                        size: 45,
-                        color: Colors.grey[800],
+                      IconButton(
+                        icon: Icon(
+                          Icons.person,
+                          size: 45,
+                          color: Colors.grey[800],
+                        ),
+                        onPressed: () {
+                          User user = User(
+                            firstName: 'Tatsiana',
+                            lastName: 'Kulinkovich',
+                            email: 'kulinkovich56@gmail.com',
+                            photoUrl: 'assets/myphoto.jpg',
+                          );
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserScreen(user: user),
+                            ),
+                          );
+                        },
                       ),
                     ])),
             const SizedBox(height: 20),
