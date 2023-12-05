@@ -16,6 +16,7 @@ dependencies:
   provider: ^6.0.0
   shared_preferences: ^2.0.8
   google_fonts: ^6.1.0
+  path: ^1.8.0
 
 dev_dependencies:
   flutter_test:
@@ -26,4 +27,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets: 
-    - lib/icons/menu.png
+    - assets/myphoto.jpg
