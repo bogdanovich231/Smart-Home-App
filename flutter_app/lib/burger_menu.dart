@@ -7,7 +7,7 @@ class BurgerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
@@ -57,7 +57,7 @@ class BurgerMenu extends StatelessWidget {
             title: Text(
               "About project",
               style: TextStyle(
-                color: Colors.grey[900],
+                color: Colors.black,
                 fontSize: 20,
               ),
             ),
@@ -73,7 +73,7 @@ class BurgerMenu extends StatelessWidget {
             title: Text(
               "Contact",
               style: TextStyle(
-                color: Colors.grey[900],
+                color: Colors.black,
                 fontSize: 20,
               ),
             ),

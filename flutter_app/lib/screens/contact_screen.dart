@@ -4,10 +4,12 @@ class ContactScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        backgroundColor: Colors.grey[300],
         title: Text('Contacts',
             style: TextStyle(
-              color: Colors.grey[700],
+              color: Colors.grey[800],
             )),
       ),
       body: Padding(

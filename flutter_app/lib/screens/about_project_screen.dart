@@ -4,10 +4,12 @@ class AboutProjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        backgroundColor: Colors.grey[300],
         title: Text('About Project',
             style: TextStyle(
-              color: Colors.grey[700],
+              color: Colors.grey[800],
             )),
       ),
       body: Padding(
@@ -19,10 +21,10 @@ class AboutProjectScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey, // Цвет блика
-                spreadRadius: 5, // Распределение блика
-                blurRadius: 15, // Размытие блика
-                offset: Offset(0, 0), // Смещение блика
+                color: Colors.grey,
+                spreadRadius: 5,
+                blurRadius: 15,
+                offset: Offset(0, 0),
               ),
             ],
           ),
@@ -31,7 +33,7 @@ class AboutProjectScreen extends StatelessWidget {
               'This application is a mobile app designed for managing a smart home with the capability of creating and using a personal account. It was developed for the purpose of learning and out of a deep interest in the world of mobile development. The motivation behind it was the desire to gain new knowledge and apply it in the creation of a mobile application.',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.black, // Цвет текста
+                color: Colors.black,
               ),
             ),
           ),

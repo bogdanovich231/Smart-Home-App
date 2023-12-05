@@ -8,10 +8,12 @@ class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        backgroundColor: Colors.grey[300],
         title: Text('User Profile',
             style: TextStyle(
-              color: Colors.grey[700],
+              color: Colors.grey[800],
             )),
       ),
       body: Padding(
@@ -39,7 +41,6 @@ class UserScreen extends StatelessWidget {
                 color: Colors.grey[600],
               ),
             ),
-            SizedBox(height: 10.0),
             Text(
               'Phone: +48 513 472 031',
               style: TextStyle(
